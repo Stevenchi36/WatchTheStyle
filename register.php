@@ -4,5 +4,5 @@
     <link rel='stylesheet' type='text/css' href='main.css'>
 </head>
 <body>
-    <h1 class='center'>Register</h1>
+    <h1 class='centerText'>Register</h1>
 </body>

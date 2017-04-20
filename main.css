@@ -1,3 +1,6 @@
-.title {
+body {
+    background-color: #cecece;
+}
+.centerText{
     text-align: center;
 }
