@@ -20,6 +20,7 @@ li:not(.contactMeList) {
 }
 .brand {
     margin: auto;
+    font-weight: 200;
 }
 li p {
     color: white;
