@@ -1,0 +1,70 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+/*    position: fixed;*/
+/*    top: 0;*/
+    width: 100%; 
+    box-shadow: 0px 3px 3px rgba(56, 56, 56, 0.5);
+}
+li {
+    float: left;
+}
+li:not(.contactMeList) {
+    border-right: 1px solid grey !important;
+}
+.contactMeList {
+    border-left: 1px solid grey !important;
+}
+.brand {
+    margin: auto;
+}
+li p {
+    color: white;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    color: cornflowerblue;
+    font-weight: bold;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover:not(.active) {
+    background-color: #111;
+    text-decoration: none;
+    color: cornflowerblue;
+}
+li a:hover.active {
+    text-decoration: none;
+}
+li a:focus.active {
+    text-decoration: none;
+}
+li a:hover a:visited a:active{
+    text-decoration: none;
+}
+.active {
+    background-color: rgb(100, 149, 237);
+    color:white !important;
+    text-decoration: none;
+}
+.active:hover {
+    color: white;
+}
+.navbar-fixed {
+    top: 0;
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+}
+body{
+    height: 600px;
+    padding-top: 60px;
+}
