@@ -66,6 +66,6 @@ li a:hover a:visited a:active{
     width: 100%;
 }
 body{
-    height: 600px;
     padding-top: 60px;
+    background-color: #f3f3f3;
 }
