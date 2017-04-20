@@ -8,7 +8,7 @@
   <title>Register | Watch the Style</title>
 
   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,700,900' rel='stylesheet' type='text/css'>
-  <link rel="icon" href="/assets/favicon.png" type="image/x-icon">
+  <link rel="icon" href="Assets/favicon.png" type="image/x-icon">
   <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
   <link rel="stylesheet" type="text/css" href="master.css">
 </head>
