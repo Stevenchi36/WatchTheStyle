@@ -3,20 +3,23 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333333;
+    padding-left: 15%;
+    padding-right: 15%;
+    background-color: #6495ed;
 /*    position: fixed;*/
 /*    top: 0;*/
     width: 100%; 
     box-shadow: 0px 3px 3px rgba(56, 56, 56, 0.5);
+    border-bottom: 1px solid #717171 !important;
 }
 li {
     float: left;
 }
 li:not(.contactMeList) {
-    border-right: 1px solid grey !important;
+    border-right: 1px solid #717171 !important;
 }
 .contactMeList {
-    border-left: 1px solid grey !important;
+    border-left: 1px solid #717171 !important;
 }
 .brand {
     margin: auto;
@@ -36,11 +39,13 @@ li a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    text-shadow: 1px 1px 5px black;
 }
 li a:hover:not(.active) {
-    background-color: #111;
+/*    background-color: #111;*/
+    box-shadow: inset 1px 1px 10px 0px rgba(25, 25, 25, 0.5);
     text-decoration: none;
-    color: cornflowerblue;
+    color: white;
 }
 li a:hover.active {
     text-decoration: none;
@@ -51,14 +56,20 @@ li a:focus.active {
 li a:hover a:visited a:active{
     text-decoration: none;
 }
+.lastLi{
+    border-right: 1px solid #717171 !important;
+}
 .active {
     background-color: rgb(100, 149, 237);
     color:white !important;
     text-decoration: none;
+    box-shadow: inset 1px 1px 10px 0px rgba(25, 25, 25, 0.5);
 }
+/*
 .active:hover {
     color: white;
 }
+*/
 .navbar-fixed {
     top: 0;
     z-index: 100;
