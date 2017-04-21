@@ -16,11 +16,11 @@
 <body>
     <nav class="hidden-xs navbar-fixed">
         <ul>
-            <li id="brandItem" class="brandItem"><a href="index.php" class="brand">Watch the Style</a></li>
-            <li><a href="" class="aboutMe" onClick="changeActiveAbout()" title="Go to About Me">New</a></li>
-            <li><a href="" class="projects" onClick="changeActiveProj()" title="Go to Projects">Search</a></li>
-            <li style="float:right" class="contactMeList"><a class="contactMe active" href="register.php" onClick="changeActiveContact()" title="Go to Contact Info">Register</a></li>
-            <li style="float:right" class="contactMeList"><a class="contactMe" href="/login" onClick="changeActiveContact()" title="Go to Contact Info">Login</a></li>
+            <li id="brandItem" class="brandItem"><a href="index.php" class="brand" title="Home">Watch the Style</a></li>
+            <li><a href="" class="aboutMe" onClick="changeActiveAbout()" title="Add new post">New</a></li>
+            <li><a href="" class="projects" onClick="changeActiveProj()" title="Search">Search</a></li>
+            <li style="float:right" class="contactMeList"><a class="contactMe active" href="register.php" onClick="changeActiveContact()" title="Register New Account">Register</a></li>
+            <li style="float:right" class="contactMeList"><a class="contactMe" href="/login" onClick="changeActiveContact()" title="Login to account">Login</a></li>
         </ul>
     </nav>
 </body>
