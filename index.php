@@ -17,10 +17,10 @@
     <nav class="hidden-xs navbar-fixed">
         <ul>
             <li id="brandItem" class="brandItem"><a href="index.php" class="brand active" title="Home">Watch the Style</a></li>
-            <li><a href="" class="aboutMe" onClick="changeActiveAbout()" title="New Post">New</a></li>
-            <li><a href="" class="projects" onClick="changeActiveProj()" title="Search">Search</a></li>
-            <li style="float:right" class="contactMeList lastLi"><a class="contactMe" href="register.php" onClick="changeActiveContact()" title="Register a new account">Register</a></li>
-            <li style="float:right" class="contactMeList"><a class="contactMe" href="/login" onClick="changeActiveContact()" title="Login to account">Login</a></li>
+            <li><a href="" class="aboutMe" title="New Post">New</a></li>
+            <li><a href="" class="projects" title="Search">Search</a></li>
+            <li style="float:right" class="contactMeList lastLi"><a class="contactMe" href="register.php" title="Register a new account">Register</a></li>
+            <li style="float:right" class="contactMeList"><a class="contactMe" href="/login" title="Login to account">Login</a></li>
         </ul>
     </nav>
 </body>
