@@ -1,3 +1,61 @@
+<?php
+    ob_start();
+    session_start();
+    //if already logged in, go to index.php
+    if(isset($_SESSION['user'])!=""){
+        header('Location: index.php');
+    }
+    include_once 'dbConnect.php';
+
+    $error = false;
+
+    //once register button is pressed
+    if(isset($_POST['btnRegister'])){
+        //Clean user input
+        $username = trim($_POST['username']);
+        $username = strip_tags($username);
+        $username = htmlspecialchars($username);
+
+        $email = trim($_POST['email']);
+        $email = strip_tags($email);
+        $email = htmlspecialchars($email);
+
+        $passwd = trim($_POST['passwd']);
+        $passwd = strip_tags($passwd);
+        $passwd = htmlspecialchars($passwd);
+
+        //Validation
+        //USERNAME
+        if(empty($username)){
+            $error = true;
+            $nameError = "Enter a username.";
+        }
+        else if(strlen($username) < 4){
+            $error = true;
+            $nameError = "Username must be at least 4 characters long.";
+        }
+        else if(!preg_match"/^[a-z\d_]{4,20}$/i", $username){
+            $error = true;
+            $nameError = "Username can only contain letters, numbers, or underscores.";
+        }
+        else{
+            //Check for existing username
+        }
+        //EMAIL
+        if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+            $error = true;
+            $emailError = "Enter a valid email address";
+        }
+        else{
+            //Check for existing email
+            $query = "SELECT userEmail FROM users WHERE userEmail='$email'";
+            $result = mysql_query($query);
+
+        }
+
+    }
+?>
+
 <!doctype html>
 <html>
 <head>
