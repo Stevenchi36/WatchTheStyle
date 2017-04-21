@@ -78,7 +78,7 @@
             <li><a href="" class="aboutMe" title="New post">New</a></li>
             <li><a href="" class="projects" title="Search">Search</a></li>
             <li style="float:right" class="contactMeList"><a class="contactMe active" href="register.php" title="Register New Account">Register</a></li>
-            <li style="float:right" class="contactMeList"><a class="contactMe" href="/login" title="Login to account">Login</a></li>
+            <li style="float:right" class="contactMeList"><a class="contactMe" href="/login.php" title="Login to account">Login</a></li>
         </ul>
     </nav>
 </body>
