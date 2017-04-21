@@ -18,7 +18,7 @@
             <li id="brandItem" class="brandItem"><a href="index.php" class="brand">Watch the Style</a></li>
             <li><a href="" class="active aboutMe" onClick="changeActiveAbout()" title="Go to About Me">New</a></li>
             <li><a href="" class="projects" onClick="changeActiveProj()" title="Go to Projects">Search</a></li>
-            <li style="float:right" class="contactMeList"><a class="contactMe" href="/register" onClick="changeActiveContact()" title="Go to Contact Info">Register</a></li>
+            <li style="float:right" class="contactMeList"><a class="contactMe" href="register.php" onClick="changeActiveContact()" title="Go to Contact Info">Register</a></li>
             <li style="float:right" class="contactMeList"><a class="contactMe" href="/login" onClick="changeActiveContact()" title="Go to Contact Info">Login</a></li>
         </ul>
     </nav>
