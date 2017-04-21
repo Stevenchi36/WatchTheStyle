@@ -7,6 +7,7 @@
 
   <title>Home | Watch the Style</title>
 
+  <link rel="mask-icon" href="favicon.png" color="red">
   <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,700,900' rel='stylesheet' type='text/css'>
   <link rel="icon" href="Assets/favicon.png" type="image/x-icon">
   <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
