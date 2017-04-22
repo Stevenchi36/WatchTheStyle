@@ -40,6 +40,13 @@
         }
         else{
             //Check for existing username
+            $query = "SELECT username FROM users WHERE username='$username'";
+            $result = mysql_query($query);
+            $count = mysql_num_rows($result);
+            if($count != 0){
+                $error = true;
+                $emailError = "Username is already in use."
+            }
         }
         //EMAIL
         if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
@@ -50,7 +57,42 @@
             //Check for existing email
             $query = "SELECT userEmail FROM users WHERE userEmail='$email'";
             $result = mysql_query($query);
+            $count = mysql_num_rows($result);
+            if($count != 0){
+                $error = true;
+                $emailError = "Email is already in use."
+            }
 
+        }
+        //PASSWORD
+        if(empty($passwd)){
+            $error = true;
+            $passError = "Enter a password.";
+        }
+        else if(strlen($passwd) < 6){
+            $error = true;
+            $passError = "Password must be at least 6 characters.";
+        }
+
+        //ENCRYPT PASSWORD
+        $passwd = hash('sha256', $passwd);
+
+        //ENTER INTO DATABASE
+        if(!$error){
+            $query = "INSERT INTO users(userName,userEmail,userPass) VALUES('$username','$email','$passwd')";
+            $res = mysql_query($query);
+
+            if($res){
+                $errTyp = "success";
+                $errMSG = "Successfully resgistered. You can login now.";
+                unset($username);
+                unset($email);
+                unset($passwd);
+            }
+            else{
+                $errTyp = "danger";
+                $errMSG = "Something went wrong, try again later.";
+            }
         }
 
     }
@@ -83,3 +125,4 @@
     </nav>
 </body>
 </html>
+<?php ob_end_flush(); ?>
