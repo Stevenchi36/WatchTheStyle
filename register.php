@@ -28,10 +28,12 @@
         </ul>
     </nav>
     <form>
-        <label>Username<input type='text' id='usernameInput'/></label>
-        <label>Email<input type='text' id='usernameInput'/></label>
-        <label>Password<input type='text' id='usernameInput'/></label>
-        <label>Confirm Password<input type='text' id='usernameInput'/></label>
+       <table>
+            <tr><label>Username<input type='text' id='usernameInput'/></label></tr>
+            <tr><label>Email<input type='email' id='emailInput'/></label></tr>
+            <tr><label>Password<input type='password' id='passwordInput'/></label></tr>
+            <tr><label>Confirm Password<input type='password' id='confirmInput'/></label></tr>
+       </table>
     </form>
 </body>
 </html>
