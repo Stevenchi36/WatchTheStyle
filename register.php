@@ -27,5 +27,11 @@
             <li style="float:right" class="contactMeList"><a class="contactMe" href="/login.php" title="Login to account">Login</a></li>
         </ul>
     </nav>
+    <form>
+        <label>Username<input type='text' id='usernameInput'/></label>
+        <label>Email<input type='text' id='usernameInput'/></label>
+        <label>Password<input type='text' id='usernameInput'/></label>
+        <label>Confirm Password<input type='text' id='usernameInput'/></label>
+    </form>
 </body>
 </html>
