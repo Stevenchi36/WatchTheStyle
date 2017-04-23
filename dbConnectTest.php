@@ -4,9 +4,9 @@
 $config = parse_ini_file('/var/www/private/config.ini');
 $connect = mysqli_connect('localhost', $config['username'], $config['password']) or die("Unable to Connect to server");
 echo $config['username'];
-mysql_select_db($dbname) or die("Could not connect to database");
+mysql_select_db($config['dbname']) or die("Could not connect to database");
 
-$test_query = "SHOW TABLES FROM $dbname";
+$test_query = "SHOW TABLES FROM WatchTheStyle";
 $result = mysql_query($test_query);
 $tblCnt = 0;
 while($tbl = mysql_fetch_array($result)) {
