@@ -8,5 +8,5 @@ $config = parse_ini_file('/var/www/private/config.ini');
 //$dbpass = 'pass';
 //$dbhost = 'host';
 echo $config['username'];
-$connect = mysqli_connect($config['servername'], $config['username'], $config['password']) or die("Unable to Connect to server");
+$connect = mysqli_connect('loclhost', $config['username'], $config['password']) or die("Unable to Connect to server");
 ?>
