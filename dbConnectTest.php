@@ -7,9 +7,9 @@ echo $config['username'];
 mysqli_select_db($connect, $config['dbname']) or die("Could not connect to database");
 
 $test_query = "SHOW TABLES FROM WatchTheStyle";
-$result = mysql_query($test_query);
+$result = mysqli_query($connect, $test_query);
 $tblCnt = 0;
-while($tbl = mysql_fetch_array($result)) {
+while($tbl = mysqli_fetch_array($result)) {
   $tblCnt++;
   #echo $tbl[0]."<br />\n";
 }
