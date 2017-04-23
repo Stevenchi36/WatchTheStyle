@@ -7,6 +7,6 @@ $config = parse_ini_file('/var/www/private/config.ini');
 //$dbuser = 'user';
 //$dbpass = 'pass';
 //$dbhost = 'host';
-$connect = mysql_connect($config['servername'], $config['username'], $onfig['password']) or die("Unable to Connect to server");
+$connect = mysqli_connect($config['servername'], $config['username'], $onfig['password']) or die("Unable to Connect to server");
 echo $config['servername'];
 ?>
