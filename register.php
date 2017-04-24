@@ -50,6 +50,10 @@
             </tr>
             <tr>
                 <td></td>
+                <td><span id='pwError'></span></td>
+            </tr>
+            <tr>
+                <td></td>
                 <td><input type='submit' class='btnRegister' value='Register' /></td>
             </tr>
         </table>
