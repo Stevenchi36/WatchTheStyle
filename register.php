@@ -28,7 +28,7 @@
         </ul>
     </nav>
     <form>
-       <table>
+        <table class='signinOptions'>
             <tr>
                 <td class='lblInputs'>Username:</td>
                 <td><input type='text' name='usernameInput' required /></td>
@@ -45,7 +45,11 @@
                 <td class='lblInputs'>Confirm Password:</td>
                 <td><input type='password' name='passwordInput2' required /></td>
             </tr>
-       </table>
+            <tr>
+                <td></td>
+                <td><input type='button' class='btnRegister' value='Register'</td>
+            </tr>
+        </table>
     </form>
 </body>
 </html>
