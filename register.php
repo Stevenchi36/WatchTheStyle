@@ -16,7 +16,7 @@
   <link rel="icon" href="Assets/favicon.png" type="image/x-icon">
   <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="javascript/register.js"></script>
+  <script src="JS/register.js"></script>
   <link rel="stylesheet" type="text/css" href="master.css">
   <link rel="stylesheet" type="text/css" href="register.css">
 </head>
@@ -42,7 +42,7 @@
             </tr>
             <tr>
                 <td class='lblInputs'>Password:</td>
-                <td><input type='password' name='passwordInput1' id='password2' pattern=".{6,}" maxlength="256" title="Password must be at least 6 characters" required/></td>
+                <td><input type='password' name='passwordInput1' id='password1' pattern=".{6,}" maxlength="256" title="Password must be at least 6 characters" required/></td>
             </tr>
             <tr>
                 <td class='lblInputs'>Confirm Password:</td>
