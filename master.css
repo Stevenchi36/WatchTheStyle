@@ -79,4 +79,6 @@ li a:hover a:visited a:active{
 body{
     padding-top: 60px;
     background-color: #f3f3f3;
+    font-family: 'Roboto Condensed',sans-serif;
+    font-size: 15px;
 }
