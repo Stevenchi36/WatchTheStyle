@@ -32,7 +32,7 @@
         <table class='signinOptions'>
             <tr>
                 <td class='lblInputs'>Username:</td>
-                <td><input type='text' name='usernameInput' required /></td>
+                <td><input type='text' name='usernameInput' pattern=".{4,30}" title="4 characters minimum." maxlength="30" required /></td>
             </tr>
             <tr>
                 <td class='lblInputs'>Email:</td>
@@ -40,11 +40,11 @@
             </tr>
             <tr>
                 <td class='lblInputs'>Password:</td>
-                <td><input type='password' name='passwordInput1' required/></td>
+                <td><input type='password' name='passwordInput1' pattern=".{6,}" maxlength="256" title="Password must be at least 6 characters." required/></td>
             </tr>
             <tr>
                 <td class='lblInputs'>Confirm Password:</td>
-                <td><input type='password' name='passwordInput2' required /></td>
+                <td><input type='password' name='passwordInput2' pattern=".{6,}" maxlength="256" required /></td>
             </tr>
             <tr>
                 <td></td>
