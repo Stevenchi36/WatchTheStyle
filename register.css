@@ -1,0 +1,20 @@
+td {
+    padding: 10px;
+}
+.lblInputs {
+    text-align: center;
+}
+table {
+    margin: auto;
+    margin-top: 20px;
+}
+.btnRegister {
+    background-color: #6495ed;
+    border: none;
+    color: white;
+    padding: 15px 20px;
+    text-shadow: 1px 1px 5px black;
+}
+.btnRegister:hover {
+    box-shadow: inset 0px 0px 15px 0px rgba(25, 25, 25, 0.5);
+}
