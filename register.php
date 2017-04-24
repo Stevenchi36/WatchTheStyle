@@ -29,10 +29,22 @@
     </nav>
     <form>
        <table>
-            <tr><label>Username<input type='text' id='usernameInput' required /></label></tr>
-            <tr><label>Email<input type='email' id='emailInput' required /></label></tr>
-            <tr><label>Password<input type='password' id='passwordInput required'/></label></tr>
-            <tr><label>Confirm Password<input type='password' id='confirmInput' required /></label></tr>
+            <tr>
+                <td class='lblInputs'>Username:</td>
+                <td><input type='text' name='usernameInput' required /></td>
+            </tr>
+            <tr>
+                <td class='lblInputs'>Email:</td>
+                <td><input type='email' name='emailInput' required /></td>
+            </tr>
+            <tr>
+                <td class='lblInputs'>Password:</td>
+                <td><input type='password' name='passwordInput1' required/></td>
+            </tr>
+            <tr>
+                <td class='lblInputs'>Confirm Password:</td>
+                <td><input type='password' name='passwordInput2' required /></td>
+            </tr>
        </table>
     </form>
 </body>
