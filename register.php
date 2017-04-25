@@ -50,7 +50,7 @@
             </tr>
             <tr>
                 <td></td>
-                <td><span id='pwError' style='color:red;'>Passwords Don't Match</span></td>
+                <td><span id='pwError' style='color:red;'></span></td>
             </tr>
             <tr>
                 <td></td>
