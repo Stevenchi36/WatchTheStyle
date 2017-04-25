@@ -14,5 +14,6 @@ $(document).ready(function(){
 				$('#register').attr('disabled','disabled');
 			}
 		}
+		$('#pwError').html($('#password1').val().length);
     });
 });
