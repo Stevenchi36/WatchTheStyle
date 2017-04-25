@@ -12,7 +12,7 @@ input {
 	line-height: 2em;
 	border-radius: 7px;
 	-webkit-border-radius: 7px;
-	-moz-border-radius: 12px;
+	-moz-border-radius: 7px;
 	border-color: #6495ed;
 	border-width: 1px;
 }
