@@ -54,7 +54,7 @@
             </tr>
             <tr>
                 <td></td>
-                <td><input type='submit' class='btnRegister' value='Register' /></td>
+                <td><input type='submit' class='btnRegister' value='Register' id='register' disabled/></td>
             </tr>
         </table>
     </form>
