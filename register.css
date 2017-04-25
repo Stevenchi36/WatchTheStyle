@@ -28,6 +28,9 @@ input {
 .btnRegister:hover {
 	box-shadow: inset 0px 0px 15px 0px rgba(25, 25, 25, 0.5);
 }
+.btnRegister:active {
+	outline-width: 7px;
+}
 #pwError {
 	margin: auto;
 }
