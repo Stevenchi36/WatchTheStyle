@@ -15,6 +15,7 @@ input {
 	-moz-border-radius: 7px;
 	border-color: #6495ed;
 	border-width: 1px;
+	text-align: center;
 }
 .btnRegister {
 	background-color: #808080;
