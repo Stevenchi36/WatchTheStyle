@@ -5,20 +5,20 @@
 <!doctype html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-  <title>Register | Watch the Style</title>
+    <title>Register | Watch the Style</title>
 
-  <link rel="mask-icon" href="Assets/safariPin.svg" color="cornflowerblue">
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
-  <link rel="icon" href="Assets/favicon.png" type="image/x-icon">
-  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="JS/register.js"></script>
-  <link rel="stylesheet" type="text/css" href="master.css">
-  <link rel="stylesheet" type="text/css" href="register.css">
+    <link rel="mask-icon" href="Assets/safariPin.svg" color="cornflowerblue">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <link rel="icon" href="Assets/favicon.png" type="image/x-icon">
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="JS/register.js"></script>
+    <link rel="stylesheet" type="text/css" href="master.css">
+    <link rel="stylesheet" type="text/css" href="register.css">
 </head>
 <body>
     <nav class="hidden-xs navbar-fixed">
@@ -34,23 +34,23 @@
         <table class='signinOptions'>
             <tr>
                 <td class='lblInputs'>Username:</td>
-                <td><input type='text' name='usernameInput' pattern=".{4,30}" title="Username must be at least 4 characters and can contain letters, numbers, dashes, and underscores" maxlength="30" required /></td>
+                <td><input type='text' name='usernameInput' pattern=".{4,30}" title="Username must be at least 4 characters" maxlength="30" size='50'  required /></td>
             </tr>
             <tr>
                 <td class='lblInputs'>Email:</td>
-                <td><input type='email' name='emailInput' required /></td>
+                <td><input type='email' name='emailInput' required size='50' required/></td>
             </tr>
             <tr>
                 <td class='lblInputs'>Password:</td>
-                <td><input type='password' name='passwordInput1' id='password1' pattern=".{6,}" maxlength="256" title="Password must be at least 6 characters" required/></td>
+                <td><input type='password' name='passwordInput1' id='password1' pattern=".{6,}" maxlength="256" title="Password must be at least 6 characters" size='50' required/></td>
             </tr>
             <tr>
                 <td class='lblInputs'>Confirm Password:</td>
-                <td><input type='password' name='passwordInput2' id='password2' pattern=".{6,}" maxlength="256" title='Passwords must match' required /></td>
+                <td><input type='password' name='passwordInput2' id='password2' pattern=".{6,}" maxlength="256" title='Passwords must match' size='50' required /></td>
             </tr>
             <tr>
                 <td></td>
-                <td><span id='pwError'></span></td>
+                <td><span id='pwError' style='color:red;'>Passwords Don't Match</span></td>
             </tr>
             <tr>
                 <td></td>
