@@ -56,7 +56,7 @@
         <table class='signinOptions'>
             <tr>
                 <td class='lblInputs'>Username:</td>
-                <td><input type='text' name='usernameInput' id='usernameInput' pattern=".{4,30}" title="Username must be at least 4 characters" maxlength="30" size='50'  required /></td>
+                <td><input type='text' name="usernameInput" id='usernameInput' pattern=".{4,30}" title="Username must be at least 4 characters" maxlength="30" size='50'  required /></td>
             </tr>
             <tr>
                 <td class='lblInputs'>Email:</td>
