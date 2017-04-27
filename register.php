@@ -3,11 +3,11 @@
 	if (isset($_POST['btnRegister'])) {
 		session_start();
     	require_once('dbConnect.php');
-		header("location: index.php");
 		$username = mysql_real_escape_string($POST['usernameInput']);
 		$username = trim($_POST[$username]);
 		$username = strip_tags($username);
 		$username = htmlspecialchars($username);
+		header("location: index.php");
 		$query = "INSERT INTO users(userName, userEmail,userPass) VALUES('$username',hello,hello)";
 		mysqli_query($connection, $query);
 		header("location: index.php");
