@@ -4,7 +4,6 @@
 		session_start();
     	require_once('dbConnect.php');
 		$username = mysqli_real_escape_string($_POST['usernameInput']);
-		header("location: index.php");
 		$username = trim($_POST[$username]);
 		$username = strip_tags($username);
 		$username = htmlspecialchars($username);
