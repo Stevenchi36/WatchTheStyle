@@ -13,7 +13,7 @@
 		$username = trim($_POST[$username]);
 		$username = strip_tags($username);
 		$username = htmlspecialchars($username);
-		$query = "INSERT INTO users(userName, userEmail,userPass) VALUES('$username','hello','hello')";
+		$query = "INSERT INTO users(userName, userEmail,userPass) VALUES('$username','z','b')";
 		if(mysqli_query($connection, $query)){
 			echo "New record created successfully";
 		}
