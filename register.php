@@ -4,10 +4,10 @@
 		session_start();
     	require_once('dbConnect.php');
 		$username = mysql_real_escape_string($POST['usernameInput']);
+		header("location: index.php");
 		$username = trim($_POST[$username]);
 		$username = strip_tags($username);
 		$username = htmlspecialchars($username);
-		header("location: index.php");
 		$query = "INSERT INTO users(userName, userEmail,userPass) VALUES('$username',hello,hello)";
 		mysqli_query($connection, $query);
 		header("location: index.php");
