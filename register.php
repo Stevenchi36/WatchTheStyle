@@ -8,11 +8,35 @@
 
 	if (isset($_POST['btnRegister'])) {
 		session_start();
+		//USERNAME
 		$username = $_POST['usernameInput'];
 		$username = mysqli_real_escape_string($connection, $username);
 		$username = trim($username);
 		$username = strip_tags($username);
 		$username = htmlspecialchars($username);
+		//EMAIL
+		$email = $_POST['emailInput'];
+		$email = mysqli_real_escape_string($connection, $email);
+		$email = trim($email);
+		$email = strip_tags($email);
+		$email = htmlspecialchars($email);
+		//PASSWORD1
+		$password1 = $_POST['passwordInput1'];
+		$password1 = mysqli_real_escape_string($connection, $password1);
+		$password1 = trim($password1);
+		$password1 = strip_tags($password1);
+		$password1 = htmlspecialchars($password1);
+		//PASSWORD2
+		$password2 = $_POST['passwordInput2'];
+		$password2 = mysqli_real_escape_string($connection, $password2);
+		$password2 = trim($password2);
+		$password2 = strip_tags($password2);
+		$password2 = htmlspecialchars($password2);
+
+		if(password1 == password2) {
+			$password = password_hash($password1, PASSWORD_BCRYPT);
+		}
+
 		$query = "INSERT INTO users(userName, userEmail,userPass) VALUES('$username','z','b')";
 		if(mysqli_query($connection, $query)){
 			echo "Registration successful!";
