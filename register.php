@@ -11,7 +11,7 @@
 
 	//FINAL: Insert into DB
 	$query = "INSERT INTO users(userName, userEmail,userPass) VALUES('$username',hello,hello)";
-	mysqli_query($connect, $query);
+	mysqli_query($connection, $query);
 ?>
 
 <!doctype html>
