@@ -8,7 +8,8 @@
 
 	if (isset($_POST['btnRegister'])) {
 		session_start();
-    	require_once('dbConnect.php');
+//    	require_once('dbConnect.php');
+		echo $_POST['usernameInput'];
 		$username = $_POST['usernameInput'];
 		$username = mysqli_real_escape_string($username);
 		$username = trim($_POST[$username]);
@@ -16,7 +17,7 @@
 		$username = htmlspecialchars($username);
 		$query = "INSERT INTO users(userName, userEmail,userPass) VALUES('$username','z','b')";
 		if(mysqli_query($connection, $query)){
-			echo "New record created successfully" . $username;
+			echo "New record created successfully";
 			print_r($_POST);
 		}
 		else {
