@@ -12,9 +12,9 @@
 		echo $_POST['usernameInput'];
 		$username = $_POST['usernameInput'];
 		echo $username;
-		$username = mysqli_real_escape_string($username);
+		$username = mysqli_real_escape_string($connection, $username);
 		echo $username;
-		$username = trim($_POST[$username]);
+		$username = trim($username);
 		echo $username;
 		$username = strip_tags($username);
 		echo $username;
