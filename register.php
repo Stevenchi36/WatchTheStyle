@@ -8,16 +8,10 @@
 
 	if (isset($_POST['btnRegister'])) {
 		session_start();
-//    	require_once('dbConnect.php');
-		echo $_POST['usernameInput'];
 		$username = $_POST['usernameInput'];
-		echo $username;
 		$username = mysqli_real_escape_string($connection, $username);
-		echo $username;
 		$username = trim($username);
-		echo $username;
 		$username = strip_tags($username);
-		echo $username;
 		$username = htmlspecialchars($username);
 		$query = "INSERT INTO users(userName, userEmail,userPass) VALUES('$username','z','b')";
 		if(mysqli_query($connection, $query)){
