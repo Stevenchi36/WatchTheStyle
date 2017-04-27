@@ -1,5 +1,12 @@
 <?php
+	session_start();
     require_once('dbConnect.php');
+
+	if (isset($_POST['btnRegister'])) {
+		$username = trim($_POST['usernameInput']);
+		$username = strip_tags($username);
+		$username = htmlspecialchars($username);
+	}
 ?>
 
 <!doctype html>
@@ -54,7 +61,7 @@
             </tr>
             <tr>
                 <td></td>
-                <td><input type='submit' class='btnRegister' value='Register' id='register' disabled/></td>
+                <td><input type='submit' class='btnRegister' value='Register' id='register' name='btnRegister' disabled/></td>
             </tr>
         </table>
     </form>
