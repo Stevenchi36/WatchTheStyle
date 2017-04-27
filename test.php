@@ -1,10 +1,11 @@
 <?php
 
-	$config = parse_ini_file('/var/www/private/config.ini');
-	$connection = mysqli_connect("localhost", $config['username'], $config['password'], $config['dbname']);
-	if(!$connection){
-		die("Connection failed: " . mysqli_connect_error());
-	}
+//	$config = parse_ini_file('/var/www/private/config.ini');
+//	$connection = mysqli_connect("localhost", $config['username'], $config['password'], $config['dbname']);
+	require_once('dbConnect.php');
+//	if(!$connection){
+//		die("Connection failed: " . mysqli_connect_error());
+//	}
 	$query = "INSERT INTO users(userName, userEmail,userPass) VALUES('hello','hello','hello')";
 
 	if(mysqli_query($connection, $query)){
