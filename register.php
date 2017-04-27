@@ -7,12 +7,10 @@
 		$username = trim($_POST[$username]);
 		$username = strip_tags($username);
 		$username = htmlspecialchars($username);
+		$query = "INSERT INTO users(userName, userEmail,userPass) VALUES('$username',hello,hello)";
+		mysqli_query($connection, $query);
+		header("location: index.php");
 	}
-
-	//FINAL: Insert into DB
-	$query = "INSERT INTO users(userName, userEmail,userPass) VALUES('$username',hello,hello)";
-	mysqli_query($connection, $query);
-	header("location: index.php");
 ?>
 
 <!doctype html>
