@@ -8,7 +8,7 @@
 		$username = strip_tags($username);
 		$username = htmlspecialchars($username);
 		$query = "INSERT INTO users(userName, userEmail,userPass) VALUES('$username',hello,hello)";
-		mysqli_query($connection, $query);
+		$result = $connection->query($query);
 		header("location: index.php");
 	}
 ?>
