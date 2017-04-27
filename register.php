@@ -9,7 +9,7 @@
 	if (isset($_POST['btnRegister'])) {
 		session_start();
     	require_once('dbConnect.php');
-		$username = $POST['usernameInput'];
+		$username = $_POST['usernameInput'];
 		$username = mysqli_real_escape_string($username);
 		$username = trim($_POST[$username]);
 		$username = strip_tags($username);
