@@ -1,5 +1,11 @@
 <?php
 
+	$config = parse_ini_file('/var/www/private/config.ini');
+	$connection = mysqli_connect("localhost", $config['username'], $config['password'], $config['dbname']);
+	if(!$connection){
+		die("Connection failed: " . mysqli_connect_error());
+	}
+
 	if (isset($_POST['btnRegister'])) {
 		session_start();
     	require_once('dbConnect.php');
@@ -7,9 +13,13 @@
 		$username = trim($_POST[$username]);
 		$username = strip_tags($username);
 		$username = htmlspecialchars($username);
-		$query = "INSERT INTO users(userName, userEmail,userPass) VALUES('$username',hello,hello)";
-		$result = $connection->query($query);
-		header("location: index.php");
+		$query = "INSERT INTO users(userName, userEmail,userPass) VALUES('$username','hello','hello')";
+		if(mysqli_query($connection, $query)){
+			echo "New record created successfully";
+		}
+		else {
+			echo "Error: " . $query . "<br>" . mysqli_error($connection);
+		}
 	}
 ?>
 
