@@ -15,7 +15,7 @@
 		$username = htmlspecialchars($username);
 		$query = "INSERT INTO users(userName, userEmail,userPass) VALUES('$username','z','b')";
 		if(mysqli_query($connection, $query)){
-			echo "New record created successfully";
+			echo "New record created successfully" . $username;
 		}
 		else {
 			echo "Error: " . $query . "<br>" . mysqli_error($connection);
