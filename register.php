@@ -30,7 +30,7 @@
             <li style="float:right" class="contactMeList"><a class="contactMe" href="/login.php" title="Login to account">Login</a></li>
         </ul>
     </nav>
-    <form>
+    <form method='post' action="register.php">
         <table class='signinOptions'>
             <tr>
                 <td class='lblInputs'>Username:</td>
