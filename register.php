@@ -3,10 +3,15 @@
     require_once('dbConnect.php');
 
 	if (isset($_POST['btnRegister'])) {
-		$username = trim($_POST['usernameInput']);
+		$username = mysql_real_escape_string($POST['usernameInput']);
+		$username = trim($_POST[$username]);
 		$username = strip_tags($username);
 		$username = htmlspecialchars($username);
 	}
+
+	//FINAL: Insert into DB
+	$query = "INSERT INTO users(userName, userEmail,userPass) VALUES('$username',hello,hello)";
+	mysqli_query($connect, $sql);
 ?>
 
 <!doctype html>
