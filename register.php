@@ -1,8 +1,8 @@
 <?php
-	session_start();
-    require_once('dbConnect.php');
 
 	if (isset($_POST['btnRegister'])) {
+		session_start();
+    	require_once('dbConnect.php');
 		$username = mysql_real_escape_string($POST['usernameInput']);
 		$username = trim($_POST[$username]);
 		$username = strip_tags($username);
