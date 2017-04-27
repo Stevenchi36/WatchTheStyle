@@ -18,19 +18,25 @@ input {
 	text-align: center;
 }
 .btnRegister {
+	display: block;
+	margin: auto;
 	background-color: #808080;
 	line-height: 1.5em;
 	border: none;
 	color: white;
 	padding: 15px 50px;
-	text-shadow: 1px 1px 5px black;
+/*	text-shadow: 1px 1px 5px black;*/
 }
 .btnRegister:hover {
-	box-shadow: inset 0px 0px 15px 0px rgba(25, 25, 25, 0.5);
+/*	box-shadow: inset 0px 0px 15px 0px rgba(25, 25, 25, 0.5);*/
 }
 .btnRegister:active {
 	outline-width: 7px;
 }
 #pwError {
-	margin: auto;
+	display: block;
+	text-align: center;
+}
+input:focus {
+	outline: none;
 }

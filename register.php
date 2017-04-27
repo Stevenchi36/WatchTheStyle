@@ -79,7 +79,7 @@
         <table class='signinOptions'>
             <tr>
                 <td class='lblInputs'>Username:</td>
-                <td><input type='text' name="usernameInput" id='usernameInput' pattern=".{4,30}" title="Username must be at least 4 characters" maxlength="30" size='50'  required /></td>
+                <td><input type='text' name="usernameInput" id='usernameInput' pattern="^[a-zA-Z0-9_-]{4,20}$" title="Username must be at least 4 characters and can contain letters, numbers, underscores, and hyphens" maxlength="20" size='50'  required /></td>
             </tr>
             <tr>
                 <td class='lblInputs'>Email:</td>
@@ -87,19 +87,17 @@
             </tr>
             <tr>
                 <td class='lblInputs'>Password:</td>
-                <td><input type='password' name='passwordInput1' id='password1' pattern=".{6,}" maxlength="256" title="Password must be at least 6 characters" size='50' required/></td>
+                <td><input type='password' name='passwordInput1' id='password1' pattern=".{8,}" maxlength="256" title="Password must be at least 6 characters" size='50' required/></td>
             </tr>
             <tr>
                 <td class='lblInputs'>Confirm Password:</td>
                 <td><input type='password' name='passwordInput2' id='password2' pattern=".{6,}" maxlength="256" title='Passwords must match' size='50' required /></td>
             </tr>
             <tr>
-                <td></td>
-                <td><span id='pwError' style='color:red;'></span></td>
+                <td colspan="2"><span id='pwError' style='color:red;'></span></td>
             </tr>
             <tr>
-                <td></td>
-                <td><input type='submit' class='btnRegister' value='Register' id='register' name='btnRegister' disabled/></td>
+                <td colspan="2"><input type='submit' class='btnRegister' value='Register' id='register' name='btnRegister' disabled/></td>
             </tr>
         </table>
     </form>
