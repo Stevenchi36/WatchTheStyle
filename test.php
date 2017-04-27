@@ -5,7 +5,7 @@
 	$config = parse_ini_file('/var/www/private/config.ini');
 	$connection = mysqli_connect($config['servername'], $config['username'], $config['password'], $config['dbname']);
 	$query = "INSERT INTO users(userName, userEmail,userPass) VALUES(hello,hello,hello);";
-	mysql_query($connection, $query);
+	mysqli_query($connection, $query);
 	header("location: index.php");
 
 ?>
