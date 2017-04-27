@@ -11,13 +11,13 @@
 //    	require_once('dbConnect.php');
 		echo $_POST['usernameInput'];
 		$username = $_POST['usernameInput'];
-		echo $_POST['usernameInput'];
+		echo $username;
 		$username = mysqli_real_escape_string($username);
-		echo $_POST['usernameInput'];
+		echo $username;
 		$username = trim($_POST[$username]);
-		echo $_POST['usernameInput'];
+		echo $username;
 		$username = strip_tags($username);
-		echo $_POST['usernameInput'];
+		echo $username;
 		$username = htmlspecialchars($username);
 		$query = "INSERT INTO users(userName, userEmail,userPass) VALUES('$username','z','b')";
 		if(mysqli_query($connection, $query)){
