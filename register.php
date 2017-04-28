@@ -39,9 +39,9 @@
 		if(empty($username) || strlen($username) < 4){
 			$error = true;
 		}
-//		if(!preg_match("/^[a-z\d_-]{4,20}$/i", $username)){
-//			$error = true;
-//		}
+		if(!preg_match("/^[a-z\d_-]{4,20}$/i", $username)){
+			$error = true;
+		}
 //		else {
 //			$query = "SELECT * FROM users WHERE userName='$username'";
 //			if($result = mysqli_query($connection, $query)){
