@@ -49,7 +49,7 @@
 			}
 		}
 
-		if($password1 == $password2 $$ $error == false) {
+		if($password1 == $password2) {
 			$password = password_hash($password1, PASSWORD_BCRYPT);
 			$query = "INSERT INTO users(userName, userEmail,userPass) VALUES('$username','$email','$password')";
 			if(mysqli_query($connection, $query)){
