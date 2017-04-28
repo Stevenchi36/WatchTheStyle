@@ -8,6 +8,7 @@
 
 	if (isset($_POST['btnRegister'])) {
 		session_start();
+		$error = false;
 		//USERNAME
 		$username = $_POST['usernameInput'];
 		$username = mysqli_real_escape_string($connection, $username);
@@ -33,6 +34,12 @@
 		$password2 = strip_tags($password2);
 		$password2 = htmlspecialchars($password2);
 
+	//Validation
+		//Username
+		if(empty($username) || strlen($username) < 4 || !preg_match("/^[a-z\d_-]{4,20}$/i", $username)){
+			$error = true;
+		}
+
 		if($password1 == $password2) {
 			$password = password_hash($password1, PASSWORD_BCRYPT);
 			$query = "INSERT INTO users(userName, userEmail,userPass) VALUES('$username','$email','$password')";
@@ -40,7 +47,7 @@
 				echo "Registration successful, you can now login!";
 			}
 			else {
-				echo "Error: " . mysqli_error($connection);
+				echo "Error, please try again later.";
 			}
 		}
 	}
