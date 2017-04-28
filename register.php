@@ -36,9 +36,9 @@
 
 	//Validation
 		//Username
-		if(empty($username) || strlen($username) < 4){
-			$error = true;
-		}
+//		if(empty($username) || strlen($username) < 4){
+//			$error = true;
+//		}
 //		if(!preg_match("/^[a-z\d_-]{4,20}$/i", $username)){
 //			$error = true;
 //		}
