@@ -59,6 +59,9 @@
 				echo "Error, please try again later.";
 			}
 		}
+		else{
+			echo "Error, please try again later."
+		}
 	}
 	mysqli_close($connection);
 ?>
