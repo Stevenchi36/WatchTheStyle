@@ -38,9 +38,18 @@
 		//Username
 		if(empty($username) || strlen($username) < 4 || !preg_match("/^[a-z\d_-]{4,20}$/i", $username)){
 			$error = true;
+		}else{
+			$query = "SELECT * FROM users WHERE userName='$username'";
+			if($result = mysqli_query($connection, $query)){
+				$rowCount = mysqli_num_rows($result);
+				if($rowCount != 0){
+					$error = true;
+					echo "Username is already taken";
+				}
+			}
 		}
 
-		if($password1 == $password2) {
+		if($password1 == $password2 $$ $error == false) {
 			$password = password_hash($password1, PASSWORD_BCRYPT);
 			$query = "INSERT INTO users(userName, userEmail,userPass) VALUES('$username','$email','$password')";
 			if(mysqli_query($connection, $query)){
