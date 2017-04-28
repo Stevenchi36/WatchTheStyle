@@ -42,16 +42,16 @@
 		if(!preg_match("/^[a-z\d_-]{4,20}$/i", $username)){
 			$error = true;
 		}
-//		else {
-//			$query = "SELECT * FROM users WHERE userName='$username'";
-//			if($result = mysqli_query($connection, $query)){
-//				$rowCount = mysqli_num_rows($result);
-//				if($rowCount != 0){
-//					$error = true;
-//					echo "Username is already taken";
-//				}
-//			}
-//		}
+		else {
+			$query = "SELECT * FROM users WHERE userName='$username'";
+			if($result = mysqli_query($connection, $query)){
+				$rowCount = mysqli_num_rows($result);
+				if($rowCount != 0){
+					$error = true;
+					echo "Username is already taken";
+				}
+			}
+		}
 
 		if($password1 == $password2) {
 			$password = password_hash($password1, PASSWORD_BCRYPT);
