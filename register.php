@@ -48,7 +48,7 @@
 				$rowCount = mysqli_num_rows($result);
 				if($rowCount != 0){
 					$error = true;
-					echo "Username is already taken";
+					echo "Username is already taken, please choose a different one!";
 				}
 			}
 		}
