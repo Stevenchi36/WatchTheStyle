@@ -62,7 +62,9 @@
 			$query = "SELECT * FROM users WHERE userEmail ='$email'";
 			if($result = mysqli_query($connection, $query)){
 				$rowcount = mysqli_num_rows($result);
+				echo "Made it 2";
 				if($rowCount != 0){
+					echo "Made it 3";
 					$error = true;
 					echo "Email is already in use!";
 				}
