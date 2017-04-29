@@ -48,14 +48,14 @@
 				$rowCount = mysqli_num_rows($result);
 				if($rowCount != 0){
 					$error = true;
-					echo "<span class='registrationMessage'>Username is already taken, please choose a different one!</span>";
+					echo "<span class='registrationMessage red'>Username is already taken, please choose a different one!</span>";
 				}
 			}
 		}
 		//Email
 		if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
             $error = true;
-            echo "<span class='registrationMessage'>Enter a valid email address</span>";
+            echo "<span class='registrationMessage red'>Enter a valid email address</span>";
         }
 		else{
 			$query = "SELECT * FROM users WHERE userEmail ='$email'";
@@ -63,7 +63,7 @@
 				$rowCount = mysqli_num_rows($result);
 				if($rowCount != 0){
 					$error = true;
-					echo "<span class='registrationMessage'>Email is already in use!</span>";
+					echo "<span class='registrationMessage red'>Email is already in use!</span>";
 				}
 			}
 		}
@@ -72,10 +72,10 @@
 			$password = password_hash($password1, PASSWORD_BCRYPT);
 			$query = "INSERT INTO users(userName, userEmail,userPass) VALUES('$username','$email','$password')";
 			if(mysqli_query($connection, $query)){
-				echo "<span class='registrationMessage'>Registration successful, you can now login!</span>";
+				echo "<span class='registrationMessage green'>Registration successful, you can now login!</span>";
 			}
 			else {
-				echo "<span class='registrationMessage'>Error, please try again later.</span>";
+				echo "<span class='registrationMessage red'>Error, please try again later.</span>";
 			}
 		}
 	}
