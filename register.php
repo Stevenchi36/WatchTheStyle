@@ -58,6 +58,7 @@
             echo "Enter a valid email address";
         }
 		else{
+			echo "Made it";
 			$query = "SELECT * FROM users WHERE userEmail ='$email'";
 			if($result = mysqli_query($connection, $query)){
 				$rowcount = mysqli_num_rows($result);
