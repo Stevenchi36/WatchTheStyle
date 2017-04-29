@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
   <link rel="icon" href="Assets/favicon.png" type="image/x-icon">
   <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
-  <link rel="stylesheet" type="text/css" href="master.css">
+  <link rel="stylesheet" type="text/css" href="CSS/master.css">
 </head>
 <body>
     <nav class="hidden-xs navbar-fixed">
