@@ -1,0 +1,33 @@
+td {
+	padding: 10px;
+}
+table {
+	margin: auto;
+	margin-top: 20px;
+}
+input {
+	line-height: 2em;
+	border-radius: 7px;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	border-color: #6495ed;
+	border-width: 1px;
+	text-align: center;
+}
+.btnLogin{
+	display: block;
+	margin: auto;
+	background-color: #6495ed;
+	line-height: 1.5em;
+	border: none;
+	color: white;
+	padding: 15px 50px;
+	text-shadow: 1px 1px 5px black;
+}
+.btnLogin:hover{
+	box-shadow: inset 0px 0px 15px 0px rgba(25, 25, 25, 0.5);
+}
+.LoginMessage{
+	display: block;
+	text-align: center;
+}
