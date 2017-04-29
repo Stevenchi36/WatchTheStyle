@@ -52,6 +52,11 @@
 				}
 			}
 		}
+		//Email
+		if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+            $error = true;
+            echo "Enter a valid email address";
+        }
 
 		if($password1 == $password2 && $error != true) {
 			$password = password_hash($password1, PASSWORD_BCRYPT);
