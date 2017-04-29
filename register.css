@@ -40,3 +40,7 @@ input {
 input:focus {
 	outline: none;
 }
+.registrationMessage{
+	display: block;
+	text-align: center;
+}
