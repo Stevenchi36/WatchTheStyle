@@ -57,6 +57,16 @@
             $error = true;
             echo "Enter a valid email address";
         }
+		else{
+			$query = "SELECT * FROM users WHERE userEmail ='$email'";
+			if($result = mysqli_query($connection, $query)){
+				$rowcount = mysqli_num_rows($result);
+				if($rowCount != 0){
+					$error = true;
+					echo "Email is already in use!";
+				}
+			}
+		}
 
 		if($password1 == $password2 && $error != true) {
 			$password = password_hash($password1, PASSWORD_BCRYPT);
