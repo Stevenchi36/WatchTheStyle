@@ -58,13 +58,10 @@
             echo "Enter a valid email address";
         }
 		else{
-			echo "Made it";
 			$query = "SELECT * FROM users WHERE userEmail ='$email'";
 			if($result = mysqli_query($connection, $query)){
 				$rowCount = mysqli_num_rows($result);
-				echo " Row Count: " . $rowCount;
 				if($rowCount != 0){
-					echo "Made it 3";
 					$error = true;
 					echo "Email is already in use!";
 				}
