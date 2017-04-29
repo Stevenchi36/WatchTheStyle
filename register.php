@@ -61,7 +61,7 @@
 			echo "Made it";
 			$query = "SELECT * FROM users WHERE userEmail ='$email'";
 			if($result = mysqli_query($connection, $query)){
-				$rowcount = mysqli_num_rows($result);
+				$rowCount = mysqli_num_rows($result);
 				echo " Row Count: " . $rowCount;
 				if($rowCount != 0){
 					echo "Made it 3";
