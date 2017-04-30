@@ -55,7 +55,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-  <title>Register | Watch the Style</title>
+  <title>Login | Watch the Style</title>
 
   <link rel="mask-icon" href="Assets/safariPin.svg" color="cornflowerblue">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
