@@ -6,7 +6,7 @@
 	if(!$connection){
 		die("Connection failed: " . mysqli_connect_error());
 	}
-
+	//Register Process
 	if (isset($_POST['btnRegister'])) {
 		$error = false;
 		//USERNAME
