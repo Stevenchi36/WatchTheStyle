@@ -83,7 +83,7 @@
     			<td><input type='password' name='passwordInput' id='password' pattern=".{8,}" maxlength="256" size='50' placeholder="Password" required/></td>
     		</tr>
     		<tr>
-    			<td><input type='submit' class='btnLogin' value='Login' id='login' name='btnLogin' disabled/></td>
+    			<td><input type='submit' class='btnLogin' value='Login' id='login' name='btnLogin' /></td>
     		</tr>
     	</table>
     </form>
