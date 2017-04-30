@@ -22,7 +22,7 @@
 		$password = trim($password);
 		$password = strip_tags($password);
 		$password = htmlspecialchars($password);
-		$password = password_hash($password, PASSWORD_BCRYPT);
+//		$password = password_hash($password, PASSWORD_BCRYPT);
 
 		if(empty($username) || strlen($username) < 4){
 			$error = true;
@@ -31,18 +31,25 @@
 			$error = true;
 		}
 		else{
-			$query = "SELECT * FROM users WHERE userName='$username' AND userPass='$password'";
+			$query = "SELECT userPass FROM users WHERE userName='$username'";
 			if($result = mysqli_query($connection, $query)){
 				$rowCount = mysqli_num_rows($result);
 				if($rowCount == 1){
-					echo "<span class='LoginMessage'>Login would have worked!</span>";
+					$row = mysql_fetch_row($result);
+					$hashedPW = $row[0];
+					if(password_verify($password, $hashedPW)){
+						echo "<span class='LoginMessage'>Login would have worked</span>";
+					}
+					else{
+						echo "<span class='LoginMessage'>Password is incorrect</span>";
+					}
 				}
 				else{
-					echo "<span class='LoginMessage'>Login information is not correct.</span>";
+					echo "<span class='LoginMessage'>Username does not exist</span>";
 				}
 			}
 			else{
-				echo "<span class='LoginMessage'>Unable to login. Please try again later.</span>";
+				echo "<span class='LoginMessage'>Unable to login, please try again later.</span>";
 			}
 		}
 	}
