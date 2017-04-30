@@ -41,18 +41,18 @@
 //					echo $row[0];
 //					echo "after hashed grab";
 					if(password_verify($password, $hashedPW)){
-						echo "<span class='LoginMessage'>Login would have worked</span>";
+						echo "<span class='LoginMessage green'>Login would have worked</span>";
 					}
 					else{
-						echo "<span class='LoginMessage'>Password is incorrect</span>";
+						echo "<span class='LoginMessage red'>Password is incorrect</span>";
 					}
 				}
 				else{
-					echo "<span class='LoginMessage'>Username does not exist</span>";
+					echo "<span class='LoginMessage red'>Username does not exist</span>";
 				}
 			}
 			else{
-				echo "<span class='LoginMessage'>Unable to login, please try again later.</span>";
+				echo "<span class='LoginMessage red'>Unable to login, please try again later.</span>";
 			}
 		}
 	}
