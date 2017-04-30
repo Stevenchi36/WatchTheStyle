@@ -8,7 +8,6 @@
 	}
 
 	if (isset($_POST['btnRegister'])) {
-		session_start();
 		$error = false;
 		//USERNAME
 		$username = $_POST['usernameInput'];
