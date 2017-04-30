@@ -1,3 +1,53 @@
+<?php
+
+	//Connect
+	$config = parse_ini_file('/var/www/private/config.ini');
+	$connection = mysqli_connect("localhost", $config['username'], $config['password'], $config['dbname']);
+	if(!$connection){
+		die("Connection failed: " . mysqli_connect_error());
+	}
+
+	if(isset($_POST['btnLogin'])) {
+		$error = false;
+
+		//USERNAME
+		$username = $_POST['usernameInput'];
+		$username = mysqli_real_escape_string($connection, $username);
+		$username = trim($username);
+		$username = strip_tags($username);
+		$username = htmlspecialchars($username);
+		//PASSWORD
+		$password = $_POST['passwordInput'];
+		$password = mysqli_real_escape_string($connection, $password);
+		$password = trim($password);
+		$password = strip_tags($password);
+		$password = htmlspecialchars($password);
+		$password = password_hash($password, PASSWORD_BCRYPT);
+
+		if(empty($username) || strlen($username) < 4){
+			$error = true;
+		}
+		if(!preg_match("/^[a-z\d_-]{4,20}$/i", $username)){
+			$error = true;
+		}
+		else{
+			$query = "SELECT * FROM users WHERE userName='$username' AND userPass='$password'";
+			if($result = mysqli_query($connection, $query)){
+				$rowCount = mysqli_num_rows($result);
+				if($rowCount == 1){
+					echo "<span class='LoginMessage'>Login would have worked!</span>";
+				}
+				else{
+					echo "<span class='LoginMessage'>Login information is not correct.</span>";
+				}
+			}
+			else{
+				echo "<span class='LoginMessage'>Unable to login. Please try again later.</span>";
+			}
+		}
+	}
+?>
+
 <!doctype html>
 <html>
 <head>
