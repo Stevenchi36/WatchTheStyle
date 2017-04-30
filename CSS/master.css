@@ -82,3 +82,9 @@ body{
     font-family: 'Roboto Condensed',sans-serif;
     font-size: 15px;
 }
+.red{
+	color: red;
+}
+.green{
+	color: green;
+}
