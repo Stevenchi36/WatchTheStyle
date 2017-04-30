@@ -37,14 +37,15 @@
 				if($rowCount == 1){
 					$row = mysql_fetch_row($result);
 					echo "before hashed grab";
-					$hashedPW = $row[0];
+//					$hashedPW = $row[0];
+					echo $row[0];
 					echo "after hashed grab";
-					if(password_verify($password, $hashedPW)){
-						echo "<span class='LoginMessage'>Login would have worked</span>";
-					}
-					else{
-						echo "<span class='LoginMessage'>Password is incorrect</span>";
-					}
+//					if(password_verify($password, $hashedPW)){
+//						echo "<span class='LoginMessage'>Login would have worked</span>";
+//					}
+//					else{
+//						echo "<span class='LoginMessage'>Password is incorrect</span>";
+//					}
 				}
 				else{
 					echo "<span class='LoginMessage'>Username does not exist</span>";
