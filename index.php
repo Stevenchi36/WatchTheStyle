@@ -27,7 +27,7 @@
             <li><a href="" class="projects" title="Search">Search</a></li>
             <?php
 				if($loggedIn){
-					echo "<li style='float:right' class='contactMeList'><a class='contactMe' href='logout.php' title='Login to account'>Logout</a></li>";
+					echo "<li style='float:right' class='contactMeList lastLi'><a class='contactMe' href='logout.php' title='Login to account'>Logout</a></li>";
 					echo "<li style='float:right' class='contactMeList'><a class='contactMe' href='' title='Login to account'>" . $sessionUser ."</a></li>";
 				}
 				else{
