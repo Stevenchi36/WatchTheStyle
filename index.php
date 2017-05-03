@@ -1,6 +1,6 @@
 <?php
 
-	inlude('session.php');
+	include('session.php');
 
 ?>
 
