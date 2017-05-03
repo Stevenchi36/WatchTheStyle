@@ -6,8 +6,6 @@
 		die("Connection failed: " . mysqli_connect_error());
 	}
 
-//	include ('dbConnect');
-
 
 	session_start();
 	$loggedIn = true;
