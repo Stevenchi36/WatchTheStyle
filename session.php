@@ -17,7 +17,7 @@
 
 	$sessionRow = mysqli_fetch_array($sessionQuery, MYSQLI_ASSOC);
 
-	$sessionUser = $row['userName'];
+	$sessionUser = $sessionRow['userName'];
 
 	if(!isset($_SESSION['loginUser'])){
 		$loggedIn = false;
