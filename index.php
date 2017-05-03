@@ -27,12 +27,12 @@
             <li><a href="" class="projects" title="Search">Search</a></li>
             <?php
 				if($loggedIn){
-					echo "<li style='float:right' class='contactMeList lastLi'><a class='contactMe' href='logout.php' title='Login to account'>Logout</a></li>";
+					echo "<li style='float:right' class='contactMeList lastLi'><a class='contactMe' href='logout.php' title='Login to account'>Sign Out</a></li>";
 					echo "<li style='float:right' class='contactMeList'><a class='contactMe' href='' title='Login to account'>" . $sessionUser ."</a></li>";
 				}
 				else{
 					echo "<li style='float:right' class='contactMeList lastLi'><a class='contactMe' href='register.php' title='Register a new account'>Register</a></li>
-            			  <li style='float:right' class='contactMeList'><a class='contactMe' href='/login.php' title='Login to account'>Login</a></li>";
+            			  <li style='float:right' class='contactMeList'><a class='contactMe' href='/login.php' title='Log out of account'>Log In</a></li>";
 				}
 			?>
         </ul>
