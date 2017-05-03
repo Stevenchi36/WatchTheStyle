@@ -1,3 +1,9 @@
+<?php
+
+	inlude('session.php');
+
+?>
+
 <!doctype html>
 <html>
 <head>
