@@ -1,12 +1,6 @@
 <?php
 
 	include('session.php');
-	if($loggedIn){
-		echo $sessionUser;
-	}
-	else{
-		echo "Not right";
-	}
 
 ?>
 
