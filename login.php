@@ -78,7 +78,7 @@
             <li id="brandItem" class="brandItem"><a href="index.php" class="brand" title="Home">Watch the Style</a></li>
             <li><a href="" class="aboutMe" title="New post">New</a></li>
             <li><a href="" class="projects" title="Search">Search</a></li>
-            <li style="float:right" class="contactMeList"><a class="contactMe" href="register.php" title="Register New Account">Register</a></li>
+            <li style="float:right" class="contactMeList lastLi"><a class="contactMe" href="register.php" title="Register New Account">Register</a></li>
             <li style="float:right" class="contactMeList"><a class="contactMe active" href="/login.php" title="Login to account">Login</a></li>
         </ul>
     </nav>
