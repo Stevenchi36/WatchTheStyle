@@ -6,6 +6,7 @@
 	if(!$connection){
 		die("Connection failed: " . mysqli_connect_error());
 	}
+	session_start();
 
 	if(isset($_POST['btnLogin'])) {
 		$error = false;
@@ -41,6 +42,8 @@
 //					echo $row[0];
 //					echo "after hashed grab";
 					if(password_verify($password, $hashedPW)){
+						$_SESSION['loginUser'] = $username;
+						header("location: index.php");
 						echo "<span class='LoginMessage green'>Login would have worked</span>";
 					}
 					else{
