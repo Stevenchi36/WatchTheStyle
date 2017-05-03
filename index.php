@@ -25,9 +25,16 @@
             <li id="brandItem" class="brandItem"><a href="index.php" class="brand active" title="Home">Watch the Style</a></li>
             <li><a href="" class="aboutMe" title="New Post">New</a></li>
             <li><a href="" class="projects" title="Search">Search</a></li>
-            <li style="float:right" class="contactMeList lastLi"><a class="contactMe" href="register.php" title="Register a new account">Register</a></li>
-            <li style="float:right" class="contactMeList"><a class="contactMe" href="/login.php" title="Login to account">Login</a></li>
-            <?php if($loggedIn){ echo "<li style='float:right' class='contactMeList'><a class='contactMe' href='' title='Login to account'>" . $sessionUser ."</a></li>"; } ?>
+            <?php
+				if($loggedIn){
+					echo "<li style='float:right' class='contactMeList'><a class='contactMe' href='logout.php' title='Login to account'>Logout</a></li>";
+					echo "<li style='float:right' class='contactMeList'><a class='contactMe' href='' title='Login to account'>" . $sessionUser ."</a></li>";
+				}
+				else{
+					echo "<li style='float:right' class='contactMeList lastLi'><a class='contactMe' href='register.php' title='Register a new account'>Register</a></li>
+            			  <li style='float:right' class='contactMeList'><a class='contactMe' href='/login.php' title='Login to account'>Login</a></li>";
+				}
+			?>
         </ul>
     </nav>
 </body>
