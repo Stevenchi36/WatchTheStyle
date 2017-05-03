@@ -3,6 +3,10 @@
 	include('session.php');
 	if($loggedIn){
 		echo $sessionUser;
+		echo "right";
+	}
+	else{
+		echo "Not right";
 	}
 
 ?>
