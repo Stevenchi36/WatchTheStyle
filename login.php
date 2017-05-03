@@ -23,8 +23,6 @@
 		$password = trim($password);
 		$password = strip_tags($password);
 		$password = htmlspecialchars($password);
-//		$password = password_hash($password, PASSWORD_BCRYPT);
-
 		if(empty($username) || strlen($username) < 4){
 			$error = true;
 		}
@@ -37,10 +35,7 @@
 				$rowCount = mysqli_num_rows($result);
 				if($rowCount == 1){
 					$row = mysqli_fetch_row($result);
-//					echo "before hashed grab";
 					$hashedPW = $row[0];
-//					echo $row[0];
-//					echo "after hashed grab";
 					if(password_verify($password, $hashedPW)){
 						$_SESSION['loginUser'] = $username;
 						header("location: index.php");
