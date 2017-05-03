@@ -1,26 +1,9 @@
 <?php
-    function db_connect() {
 
-        static $connection;
+    $config = parse_ini_file('/var/www/private/config.ini');
+	$connection = mysqli_connect("localhost", $config['username'], $config['password'], $config['dbname']);
+	if(!$connection){
+		die("Connection failed: " . mysqli_connect_error());
+	}
 
-        if(!isset($connection)) {
-
-            $config = parse_ini_file('/var/www/private/config.ini');
-            $connection = mysqli_connect($config['servername'], $config['username'], $config['password'], $config['dbname']);
-
-        }
-
-        if(!$connection) {
-
-            return mysqli_connect_error();
-
-        }
-        return $connection;
-    }
-
-    $connection = db_connect();
-
-    if ($connection->connect_error) {
-        die("Connection failed: " . $connection->connect_error);
-    }
 ?>
