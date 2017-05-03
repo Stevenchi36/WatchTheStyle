@@ -1,6 +1,9 @@
 <?php
 
 	include('session.php');
+	if($loggedIn){
+		echo $sessionUser;
+	}
 
 ?>
 

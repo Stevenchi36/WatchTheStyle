@@ -10,6 +10,7 @@
 
 
 	session_start();
+	$loggedIn = true;
 	$userCheck = $_SESSION['loginUser'];
 
 	$sessionQuery = mysqli_query($connection, "SELECT userName FROM users WHERE userName='$userCheck'");
@@ -19,6 +20,7 @@
 	$sessionUser = $row['userName'];
 
 	if(!isset($_SESSION['loginUser'])){
+		$loggedIn = false;
 		header("location: login.php");
 	}
 ?>
