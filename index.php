@@ -2,7 +2,7 @@
 
 	include('session.php');
 	if($loggedIn){
-		echo $sessionUser;
+		echo "hello";
 	}
 
 ?>
