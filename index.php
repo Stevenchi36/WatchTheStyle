@@ -4,6 +4,7 @@
 	if($loggedIn){
 		echo $sessionUser;
 		echo "right";
+		echo $_SESSION['loginUser'];
 	}
 	else{
 		echo "Not right";
